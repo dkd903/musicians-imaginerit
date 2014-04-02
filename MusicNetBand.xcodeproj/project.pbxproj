@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A50B917518EC290700F666E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B917418EC290700F666E3 /* Foundation.framework */; };
+		A50B917718EC290700F666E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B917618EC290700F666E3 /* CoreGraphics.framework */; };
+		A50B917918EC290700F666E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B917818EC290700F666E3 /* UIKit.framework */; };
+		A50B917F18EC290700F666E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50B917D18EC290700F666E3 /* InfoPlist.strings */; };
+		A50B918118EC290700F666E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B918018EC290700F666E3 /* main.m */; };
+		A50B918518EC290700F666E3 /* MNBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B918418EC290700F666E3 /* MNBAppDelegate.m */; };
+		A50B918818EC290700F666E3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50B918618EC290700F666E3 /* Main_iPhone.storyboard */; };
+		A50B918B18EC290700F666E3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50B918918EC290700F666E3 /* Main_iPad.storyboard */; };
+		A50B918E18EC290700F666E3 /* MNBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B918D18EC290700F666E3 /* MNBFirstViewController.m */; };
+		A50B919118EC290700F666E3 /* MNBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B919018EC290700F666E3 /* MNBSecondViewController.m */; };
+		A50B919318EC290700F666E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50B919218EC290700F666E3 /* Images.xcassets */; };
+		A50B919A18EC290700F666E3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B919918EC290700F666E3 /* XCTest.framework */; };
+		A50B919B18EC290700F666E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B917418EC290700F666E3 /* Foundation.framework */; };
+		A50B919C18EC290700F666E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B917818EC290700F666E3 /* UIKit.framework */; };
+		A50B91A418EC290700F666E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50B91A218EC290700F666E3 /* InfoPlist.strings */; };
+		A50B91A618EC290700F666E3 /* MusicNetBandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B91A518EC290700F666E3 /* MusicNetBandTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A50B919D18EC290700F666E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A50B916918EC290600F666E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50B917018EC290700F666E3;
+			remoteInfo = MusicNetBand;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A50B917118EC290700F666E3 /* MusicNetBand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicNetBand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50B917418EC290700F666E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A50B917618EC290700F666E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A50B917818EC290700F666E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A50B917C18EC290700F666E3 /* MusicNetBand-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicNetBand-Info.plist"; sourceTree = "<group>"; };
+		A50B917E18EC290700F666E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A50B918018EC290700F666E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A50B918218EC290700F666E3 /* MusicNetBand-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicNetBand-Prefix.pch"; sourceTree = "<group>"; };
+		A50B918318EC290700F666E3 /* MNBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBAppDelegate.h; sourceTree = "<group>"; };
+		A50B918418EC290700F666E3 /* MNBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBAppDelegate.m; sourceTree = "<group>"; };
+		A50B918718EC290700F666E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A50B918A18EC290700F666E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		A50B918C18EC290700F666E3 /* MNBFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBFirstViewController.h; sourceTree = "<group>"; };
+		A50B918D18EC290700F666E3 /* MNBFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBFirstViewController.m; sourceTree = "<group>"; };
+		A50B918F18EC290700F666E3 /* MNBSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBSecondViewController.h; sourceTree = "<group>"; };
+		A50B919018EC290700F666E3 /* MNBSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBSecondViewController.m; sourceTree = "<group>"; };
+		A50B919218EC290700F666E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A50B919818EC290700F666E3 /* MusicNetBandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicNetBandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50B919918EC290700F666E3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A50B91A118EC290700F666E3 /* MusicNetBandTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicNetBandTests-Info.plist"; sourceTree = "<group>"; };
+		A50B91A318EC290700F666E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A50B91A518EC290700F666E3 /* MusicNetBandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicNetBandTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A50B916E18EC290700F666E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50B917718EC290700F666E3 /* CoreGraphics.framework in Frameworks */,
+				A50B917918EC290700F666E3 /* UIKit.framework in Frameworks */,
+				A50B917518EC290700F666E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50B919518EC290700F666E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50B919A18EC290700F666E3 /* XCTest.framework in Frameworks */,
+				A50B919C18EC290700F666E3 /* UIKit.framework in Frameworks */,
+				A50B919B18EC290700F666E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50B916818EC290600F666E3 = {
+			isa = PBXGroup;
+			children = (
+				A50B917A18EC290700F666E3 /* MusicNetBand */,
+				A50B919F18EC290700F666E3 /* MusicNetBandTests */,
+				A50B917318EC290700F666E3 /* Frameworks */,
+				A50B917218EC290700F666E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A50B917218EC290700F666E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A50B917118EC290700F666E3 /* MusicNetBand.app */,
+				A50B919818EC290700F666E3 /* MusicNetBandTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A50B917318EC290700F666E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A50B917418EC290700F666E3 /* Foundation.framework */,
+				A50B917618EC290700F666E3 /* CoreGraphics.framework */,
+				A50B917818EC290700F666E3 /* UIKit.framework */,
+				A50B919918EC290700F666E3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A50B917A18EC290700F666E3 /* MusicNetBand */ = {
+			isa = PBXGroup;
+			children = (
+				A50B918318EC290700F666E3 /* MNBAppDelegate.h */,
+				A50B918418EC290700F666E3 /* MNBAppDelegate.m */,
+				A50B918618EC290700F666E3 /* Main_iPhone.storyboard */,
+				A50B918918EC290700F666E3 /* Main_iPad.storyboard */,
+				A50B918C18EC290700F666E3 /* MNBFirstViewController.h */,
+				A50B918D18EC290700F666E3 /* MNBFirstViewController.m */,
+				A50B918F18EC290700F666E3 /* MNBSecondViewController.h */,
+				A50B919018EC290700F666E3 /* MNBSecondViewController.m */,
+				A50B919218EC290700F666E3 /* Images.xcassets */,
+				A50B917B18EC290700F666E3 /* Supporting Files */,
+			);
+			path = MusicNetBand;
+			sourceTree = "<group>";
+		};
+		A50B917B18EC290700F666E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A50B917C18EC290700F666E3 /* MusicNetBand-Info.plist */,
+				A50B917D18EC290700F666E3 /* InfoPlist.strings */,
+				A50B918018EC290700F666E3 /* main.m */,
+				A50B918218EC290700F666E3 /* MusicNetBand-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A50B919F18EC290700F666E3 /* MusicNetBandTests */ = {
+			isa = PBXGroup;
+			children = (
+				A50B91A518EC290700F666E3 /* MusicNetBandTests.m */,
+				A50B91A018EC290700F666E3 /* Supporting Files */,
+			);
+			path = MusicNetBandTests;
+			sourceTree = "<group>";
+		};
+		A50B91A018EC290700F666E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A50B91A118EC290700F666E3 /* MusicNetBandTests-Info.plist */,
+				A50B91A218EC290700F666E3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50B917018EC290700F666E3 /* MusicNetBand */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A50B91A918EC290700F666E3 /* Build configuration list for PBXNativeTarget "MusicNetBand" */;
+			buildPhases = (
+				A50B916D18EC290700F666E3 /* Sources */,
+				A50B916E18EC290700F666E3 /* Frameworks */,
+				A50B916F18EC290700F666E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicNetBand;
+			productName = MusicNetBand;
+			productReference = A50B917118EC290700F666E3 /* MusicNetBand.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A50B919718EC290700F666E3 /* MusicNetBandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A50B91AC18EC290700F666E3 /* Build configuration list for PBXNativeTarget "MusicNetBandTests" */;
+			buildPhases = (
+				A50B919418EC290700F666E3 /* Sources */,
+				A50B919518EC290700F666E3 /* Frameworks */,
+				A50B919618EC290700F666E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A50B919E18EC290700F666E3 /* PBXTargetDependency */,
+			);
+			name = MusicNetBandTests;
+			productName = MusicNetBandTests;
+			productReference = A50B919818EC290700F666E3 /* MusicNetBandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A50B916918EC290600F666E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MNB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = RIT;
+				TargetAttributes = {
+					A50B919718EC290700F666E3 = {
+						TestTargetID = A50B917018EC290700F666E3;
+					};
+				};
+			};
+			buildConfigurationList = A50B916C18EC290600F666E3 /* Build configuration list for PBXProject "MusicNetBand" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50B916818EC290600F666E3;
+			productRefGroup = A50B917218EC290700F666E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50B917018EC290700F666E3 /* MusicNetBand */,
+				A50B919718EC290700F666E3 /* MusicNetBandTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A50B916F18EC290700F666E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50B918B18EC290700F666E3 /* Main_iPad.storyboard in Resources */,
+				A50B919318EC290700F666E3 /* Images.xcassets in Resources */,
+				A50B918818EC290700F666E3 /* Main_iPhone.storyboard in Resources */,
+				A50B917F18EC290700F666E3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50B919618EC290700F666E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50B91A418EC290700F666E3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A50B916D18EC290700F666E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50B919118EC290700F666E3 /* MNBSecondViewController.m in Sources */,
+				A50B918E18EC290700F666E3 /* MNBFirstViewController.m in Sources */,
+				A50B918518EC290700F666E3 /* MNBAppDelegate.m in Sources */,
+				A50B918118EC290700F666E3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50B919418EC290700F666E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50B91A618EC290700F666E3 /* MusicNetBandTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A50B919E18EC290700F666E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50B917018EC290700F666E3 /* MusicNetBand */;
+			targetProxy = A50B919D18EC290700F666E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A50B917D18EC290700F666E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50B917E18EC290700F666E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A50B918618EC290700F666E3 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50B918718EC290700F666E3 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A50B918918EC290700F666E3 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50B918A18EC290700F666E3 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A50B91A218EC290700F666E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50B91A318EC290700F666E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A50B91A718EC290700F666E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A50B91A818EC290700F666E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A50B91AA18EC290700F666E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicNetBand/MusicNetBand-Prefix.pch";
+				INFOPLIST_FILE = "MusicNetBand/MusicNetBand-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A50B91AB18EC290700F666E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicNetBand/MusicNetBand-Prefix.pch";
+				INFOPLIST_FILE = "MusicNetBand/MusicNetBand-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A50B91AD18EC290700F666E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MusicNetBand.app/MusicNetBand";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicNetBand/MusicNetBand-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MusicNetBandTests/MusicNetBandTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A50B91AE18EC290700F666E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MusicNetBand.app/MusicNetBand";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicNetBand/MusicNetBand-Prefix.pch";
+				INFOPLIST_FILE = "MusicNetBandTests/MusicNetBandTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A50B916C18EC290600F666E3 /* Build configuration list for PBXProject "MusicNetBand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50B91A718EC290700F666E3 /* Debug */,
+				A50B91A818EC290700F666E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A50B91A918EC290700F666E3 /* Build configuration list for PBXNativeTarget "MusicNetBand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50B91AA18EC290700F666E3 /* Debug */,
+				A50B91AB18EC290700F666E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A50B91AC18EC290700F666E3 /* Build configuration list for PBXNativeTarget "MusicNetBandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50B91AD18EC290700F666E3 /* Debug */,
+				A50B91AE18EC290700F666E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A50B916918EC290600F666E3 /* Project object */;
+}
