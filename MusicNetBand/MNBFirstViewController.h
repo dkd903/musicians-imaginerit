@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MNBFirstViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITextField *musicId;
+@property (weak, nonatomic) IBOutlet UIWebView *webViews;
+- (IBAction)nextClick:(id)sender;
 @end

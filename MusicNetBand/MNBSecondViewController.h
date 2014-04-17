@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MNBSecondViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *musicId;
+@property (weak, nonatomic) IBOutlet UITextField *question;
+- (IBAction)submitQuestion:(id)sender;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *questionIndicator;
 
 @end
