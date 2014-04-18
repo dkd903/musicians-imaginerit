@@ -20,12 +20,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"notes" ofType:@"pdf"];
-    NSURL *targetURL = [NSURL fileURLWithPath:path];
-    NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-    [_webViews loadRequest:request];
-    _webViews.scrollView.scrollEnabled = TRUE;
-    _webViews.scalesPageToFit = TRUE;
+    NSLog(@"MSIC ID - %@", _musicId);
+        _musicianQuestions = [NSArray arrayWithObjects:@"If you could live anywhere on earth, where would you live?",
+                    @"If you could choose your last meal, what would it be?",
+                    @"Would you rather be rich and ugly, or poor and good looking?",
+                    @"Who was the last person that you called or texted?",
+                    @"What kind of old person do you want to grow up to become?",
+                    @"How do you like your eggs cooked?",
+                    @"Would you rather be the most popular kid in school or the smartest kid in school?",
+                    @"How long does it take for you to get ready in the morning?", nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(showVotes) userInfo:nil repeats:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,47 +45,106 @@
 }
 
 - (IBAction)nextClick:(id)sender {
-    
-    //[_webViews stringByEvaluatingJavaScriptFromString:@"window.scrollTo(0.0, 100.0)"];
-    _first += 500;
-    _last += 600;
-    _webViews.scrollView.contentOffset = CGPointMake(0, _last);
-    
+    [_nextCellIndicator startAnimating];
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kMNapiUrl]];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *parameters = @{@"musicianId": [NSNumber numberWithInt:[_musicId intValue] ]};
+    AFHTTPRequestOperation *op = [manager POST:@"toNextCell" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
+        [_nextCellIndicator stopAnimating];
+        UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertViewE show];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
+        [_nextCellIndicator stopAnimating];
+        UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertViewE show];
+    }];
+    [op start];
+}
 
-        
-        //[_questionIndicator startAnimating];
-        
-        AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kMNapiUrl]];
-        //manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    //NSInteger uid = [[_musicId text] integerValue];
-    
-        NSDictionary *parameters = @{@"musicianId": [NSNumber numberWithInt:[[_musicId text] intValue] ]};
-        AFHTTPRequestOperation *op = [manager POST:@"toNextCell" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
-            //[_questionIndicator stopAnimating];
+- (void)showVotes {
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kMNapiUrl]];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *parameters = @{@"musicianId": [NSNumber numberWithInt:[_musicId intValue] ]};
+    AFHTTPRequestOperation *op = [manager POST:@"getVotes" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
+        [_voteLabel setText:operation.responseString];
+        //UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        //[alertViewE show];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
+        //UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        //[alertViewE show];
+    }];
+    [op start];
+}
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog(@"%lu", (unsigned long)[_musicianQuestions count]);
+    return [_musicianQuestions count];
+}
 
-            UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertViewE show];
-            
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-            NSLog(@"Error: %@ ***** %@", operation.responseString, error);
-            //[_questionIndicator stopAnimating];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    NSLog(@"%@", @"jjj");
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    cell.textLabel.text = [_musicianQuestions objectAtIndex:indexPath.row];
+    cell.textLabel.numberOfLines = 2;
+    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    
+    return cell;
+}
 
-            UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertViewE show];
-            
-        }];
-        
-        [op start];
-        
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    NSLog(@"%@",[_musicianQuestions objectAtIndex:indexPath.row]);
+    
+    [_questionIndicator startAnimating];
+    
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kMNapiUrl]];
+    //manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     
+    
+    NSDictionary *parameters = @{@"newQuestion": [_musicianQuestions objectAtIndex:indexPath.row], @"musicianId": [NSNumber numberWithInt:[_musicId intValue] ]};
+    AFHTTPRequestOperation *op = [manager POST:@"setNewQuestion" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
+        [_questionIndicator stopAnimating];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Question Has Been Added" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+        //UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        //[alertViewE show];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
+        [_questionIndicator stopAnimating];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Cannot Add Question" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+        //UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        //[alertViewE show];
+        
+    }];
+    
+    [op start];
     
 }
+
 @end
