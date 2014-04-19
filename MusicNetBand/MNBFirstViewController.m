@@ -34,7 +34,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(showVotes) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(showVotes) userInfo:nil repeats:YES];
     
 }
 
@@ -46,6 +46,7 @@
 
 - (IBAction)nextClick:(id)sender {
     [_nextCellIndicator startAnimating];
+    //NSLog(@"ggg %@", _musicId);
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kMNapiUrl]];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -55,6 +56,7 @@
         [_nextCellIndicator stopAnimating];
         UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertViewE show];
+        [_cellLabel setText:[responseObject[@"cellNumber"] stringValue]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@ ***** %@", operation.responseString, error);
         [_nextCellIndicator stopAnimating];
@@ -74,6 +76,7 @@
         [_voteLabel setText:operation.responseString];
         //UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         //[alertViewE show];
+        [_voteLabel setText:responseObject[@"votesPercent"]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@ ***** %@", operation.responseString, error);
         //UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Response" message:operation.responseString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];

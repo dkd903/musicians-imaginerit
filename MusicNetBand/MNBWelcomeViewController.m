@@ -8,6 +8,8 @@
 
 #import "MNBWelcomeViewController.h"
 #import "MNBFirstViewController.h"
+#import "MNBApiCreds.h"
+#import "AFNetworking.h"
 
 @interface MNBWelcomeViewController ()
 

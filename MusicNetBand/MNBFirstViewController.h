@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface MNBFirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) NSString *musicId;
+@property (strong, nonatomic) NSString *musicId;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *nextCellIndicator;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *questionIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *voteLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cellLabel;
 @property NSArray *musicianQuestions;
 - (IBAction)nextClick:(id)sender;
 @end
