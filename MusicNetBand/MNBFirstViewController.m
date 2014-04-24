@@ -34,6 +34,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [_musicianIdentifierLabel setText:_musicId];
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(showVotes) userInfo:nil repeats:YES];
     
 }
