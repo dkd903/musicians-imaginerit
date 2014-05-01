@@ -10,6 +10,7 @@
 #import "MNBFirstViewController.h"
 #import "MNBApiCreds.h"
 #import "AFNetworking.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MNBWelcomeViewController ()
 
@@ -29,8 +30,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _musicianMainName = @"";
+    _musicianMainId = @"";
     // Do any additional setup after loading the view.
-    [_musicianId setFrame:CGRectMake(180, 450, 400, 250)];
+    _musicianNames = [NSArray arrayWithObjects:@"Violin 1",
+                      @"Violin 2",
+                      @"Viola",
+                      @"Cello",
+                      @"Ukulele",
+                      @"Vibes", nil];
+    _musicWelcome.layer.cornerRadius = 5;
+    _musicWelcome.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,22 +58,55 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     MNBFirstViewController *targetVC = (MNBFirstViewController*)segue.destinationViewController;
-    targetVC.musicId = [_musicianId text];
+    targetVC.musicId = _musicianMainId;
+    targetVC.musicName = _musicianMainName;
 }
 
 #pragma mark - Sender
 
 - (IBAction)continueButton:(id)sender {
-    NSString *musicianId = [_musicianId text];
-    [musicianId stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ];
-    if ([musicianId length] == 0) {
+    if ([_musicianMainName length] == 0) {
         UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please Enter Musician's ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertViewE show];
-    } else if ([[_musicianId text] intValue] > 6 || [[_musicianId text] intValue] < 1) {
-        UIAlertView *alertViewE = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Musician's ID cannot be greater than 6" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertViewE show];
     } else {
         [self performSegueWithIdentifier:@"SegueToMain" sender:self];
     }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog(@"%lu", (unsigned long)[_musicianNames count]);
+    return [_musicianNames count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    //NSLog(@"%@", @"jjj");
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    cell.textLabel.text = [_musicianNames objectAtIndex:indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    //cell.textLabel.numberOfLines = 2;
+    //cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 45;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //[tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    _musicianMainId = [NSString stringWithFormat:@"%d",(int)indexPath.row+1 ];
+    _musicianMainName = [_musicianNames objectAtIndex:indexPath.row];
+    //NSLog(@"%@",[_musicianNames objectAtIndex:indexPath.row]);
+    
 }
 @end

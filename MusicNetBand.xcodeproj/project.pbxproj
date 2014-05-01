@@ -38,6 +38,11 @@
 		A552F73418FC7607006DB35F /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A552F72118FC7607006DB35F /* UIProgressView+AFNetworking.m */; };
 		A552F73518FC7607006DB35F /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A552F72318FC7607006DB35F /* UIRefreshControl+AFNetworking.m */; };
 		A552F73618FC7607006DB35F /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A552F72518FC7607006DB35F /* UIWebView+AFNetworking.m */; };
+		A5591524190B17010095BB75 /* cello.png in Resources */ = {isa = PBXBuildFile; fileRef = A559151F190B17010095BB75 /* cello.png */; };
+		A5591525190B17010095BB75 /* ukulele.png in Resources */ = {isa = PBXBuildFile; fileRef = A5591520190B17010095BB75 /* ukulele.png */; };
+		A5591526190B17010095BB75 /* vibes.png in Resources */ = {isa = PBXBuildFile; fileRef = A5591521190B17010095BB75 /* vibes.png */; };
+		A5591527190B17010095BB75 /* viola.png in Resources */ = {isa = PBXBuildFile; fileRef = A5591522190B17010095BB75 /* viola.png */; };
+		A5591528190B17010095BB75 /* violin.png in Resources */ = {isa = PBXBuildFile; fileRef = A5591523190B17010095BB75 /* violin.png */; };
 		A5B64E5E190160CD0005E3F7 /* button-next-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B64E5D190160CD0005E3F7 /* button-next-cell.png */; };
 		A5CAA0AD1900BA2C00F3A746 /* continue-button.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0AC1900BA2C00F3A746 /* continue-button.png */; };
 		A5CAA0AF1900BB2900F3A746 /* ios-linen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0AE1900BB2900F3A746 /* ios-linen.jpg */; };
@@ -47,10 +52,6 @@
 		A5CAA0BD1900BD1E00F3A746 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0B31900BD1D00F3A746 /* Icon-60@2x.png */; };
 		A5CAA0BE1900BD1E00F3A746 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0B41900BD1D00F3A746 /* Icon-76.png */; };
 		A5CAA0BF1900BD1E00F3A746 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0B51900BD1D00F3A746 /* Icon-76@2x.png */; };
-		A5CAA0C01900BD1E00F3A746 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0B61900BD1D00F3A746 /* Icon-Small.png */; };
-		A5CAA0C11900BD1E00F3A746 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0B71900BD1D00F3A746 /* Icon-Small@2x.png */; };
-		A5CAA0C21900BD1E00F3A746 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0B81900BD1D00F3A746 /* Icon.png */; };
-		A5CAA0C31900BD1E00F3A746 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0B91900BD1D00F3A746 /* Icon@2x.png */; };
 		A5CAA0C61900BD6100F3A746 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0C41900BD6100F3A746 /* Default.png */; };
 		A5CAA0C71900BD6100F3A746 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0C51900BD6100F3A746 /* Default@2x.png */; };
 		A5CAA0CB1900D39B00F3A746 /* button-continue.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CAA0CA1900D39B00F3A746 /* button-continue.png */; };
@@ -125,6 +126,11 @@
 		A552F72418FC7607006DB35F /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		A552F72518FC7607006DB35F /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		A552F73718FC7703006DB35F /* MNBApiCreds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNBApiCreds.h; sourceTree = "<group>"; };
+		A559151F190B17010095BB75 /* cello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cello.png; sourceTree = "<group>"; };
+		A5591520190B17010095BB75 /* ukulele.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ukulele.png; sourceTree = "<group>"; };
+		A5591521190B17010095BB75 /* vibes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vibes.png; sourceTree = "<group>"; };
+		A5591522190B17010095BB75 /* viola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viola.png; sourceTree = "<group>"; };
+		A5591523190B17010095BB75 /* violin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = violin.png; sourceTree = "<group>"; };
 		A5B64E5D190160CD0005E3F7 /* button-next-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-next-cell.png"; sourceTree = "<group>"; };
 		A5CAA0AC1900BA2C00F3A746 /* continue-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue-button.png"; sourceTree = "<group>"; };
 		A5CAA0AE1900BB2900F3A746 /* ios-linen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ios-linen.jpg"; sourceTree = "<group>"; };
@@ -134,10 +140,6 @@
 		A5CAA0B31900BD1D00F3A746 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		A5CAA0B41900BD1D00F3A746 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
 		A5CAA0B51900BD1D00F3A746 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
-		A5CAA0B61900BD1D00F3A746 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		A5CAA0B71900BD1D00F3A746 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		A5CAA0B81900BD1D00F3A746 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		A5CAA0B91900BD1D00F3A746 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		A5CAA0C41900BD6100F3A746 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A5CAA0C51900BD6100F3A746 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5CAA0CA1900D39B00F3A746 /* button-continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-continue.png"; sourceTree = "<group>"; };
@@ -224,12 +226,13 @@
 				A5B64E5D190160CD0005E3F7 /* button-next-cell.png */,
 				A5CAA0B41900BD1D00F3A746 /* Icon-76.png */,
 				A5CAA0B51900BD1D00F3A746 /* Icon-76@2x.png */,
-				A5CAA0B61900BD1D00F3A746 /* Icon-Small.png */,
-				A5CAA0B71900BD1D00F3A746 /* Icon-Small@2x.png */,
-				A5CAA0B81900BD1D00F3A746 /* Icon.png */,
-				A5CAA0B91900BD1D00F3A746 /* Icon@2x.png */,
 				A5CAA0C41900BD6100F3A746 /* Default.png */,
 				A5CAA0C51900BD6100F3A746 /* Default@2x.png */,
+				A559151F190B17010095BB75 /* cello.png */,
+				A5591520190B17010095BB75 /* ukulele.png */,
+				A5591521190B17010095BB75 /* vibes.png */,
+				A5591522190B17010095BB75 /* viola.png */,
+				A5591523190B17010095BB75 /* violin.png */,
 				A50B919218EC290700F666E3 /* Images.xcassets */,
 				A50B917B18EC290700F666E3 /* Supporting Files */,
 			);
@@ -363,6 +366,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = RIT;
 				TargetAttributes = {
+					A50B917018EC290700F666E3 = {
+						DevelopmentTeam = FMW9UE5435;
+					};
 					A50B919718EC290700F666E3 = {
 						TestTargetID = A50B917018EC290700F666E3;
 					};
@@ -392,12 +398,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CAA0C31900BD1E00F3A746 /* Icon@2x.png in Resources */,
 				A5CAA0BD1900BD1E00F3A746 /* Icon-60@2x.png in Resources */,
+				A5591528190B17010095BB75 /* violin.png in Resources */,
 				A5CAA0AD1900BA2C00F3A746 /* continue-button.png in Resources */,
+				A5591525190B17010095BB75 /* ukulele.png in Resources */,
 				A5CAA0CB1900D39B00F3A746 /* button-continue.png in Resources */,
-				A5CAA0C01900BD1E00F3A746 /* Icon-Small.png in Resources */,
 				A50B919318EC290700F666E3 /* Images.xcassets in Resources */,
+				A5591527190B17010095BB75 /* viola.png in Resources */,
 				A5CAA0BA1900BD1E00F3A746 /* Icon-40.png in Resources */,
 				A5CAA0C61900BD6100F3A746 /* Default.png in Resources */,
 				A5B64E5E190160CD0005E3F7 /* button-next-cell.png in Resources */,
@@ -407,11 +414,11 @@
 				A5CAA0CD1900D3C900F3A746 /* button-continue.png in Resources */,
 				A5CAA0BB1900BD1E00F3A746 /* Icon-40@2x.png in Resources */,
 				A5CAA0C71900BD6100F3A746 /* Default@2x.png in Resources */,
+				A5591524190B17010095BB75 /* cello.png in Resources */,
+				A5591526190B17010095BB75 /* vibes.png in Resources */,
 				A5CAA0AF1900BB2900F3A746 /* ios-linen.jpg in Resources */,
 				A5CAA0BF1900BD1E00F3A746 /* Icon-76@2x.png in Resources */,
-				A5CAA0C21900BD1E00F3A746 /* Icon.png in Resources */,
 				A50B917F18EC290700F666E3 /* InfoPlist.strings in Resources */,
-				A5CAA0C11900BD1E00F3A746 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,13 +574,15 @@
 		A50B91AA18EC290700F666E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicNetBand/MusicNetBand-Prefix.pch";
 				INFOPLIST_FILE = "MusicNetBand/MusicNetBand-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -582,13 +591,15 @@
 		A50B91AB18EC290700F666E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicNetBand/MusicNetBand-Prefix.pch";
 				INFOPLIST_FILE = "MusicNetBand/MusicNetBand-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};

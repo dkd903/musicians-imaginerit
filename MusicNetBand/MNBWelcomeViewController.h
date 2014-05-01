@@ -10,6 +10,8 @@
 
 @interface MNBWelcomeViewController : UIViewController
 - (IBAction)continueButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextField *musicianId;
-
+@property (weak, nonatomic) IBOutlet UIView *musicWelcome;
+@property NSArray *musicianNames;
+@property NSString *musicianMainId;
+@property NSString *musicianMainName;
 @end
